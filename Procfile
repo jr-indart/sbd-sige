@@ -1,1 +1,1 @@
-web: gunicorn sige.wsgi --log-file -
+web: gunicorn dbsige.wsgi --log-file -
