@@ -3,3 +3,4 @@
 .sige/
 *.sqlite3
 *pyc
+.secrets.sh
