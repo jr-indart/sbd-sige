@@ -12,10 +12,14 @@ Class-based views
 Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
+from django.conf.urls import url
 from django.contrib import admin
 
-urlpatterns = [
-    url(r'^$', 'dbsige.core.views.home'),
-    url(r'^admin/', include(admin.site.urls)),
-]
+from dbsige.core.views import home
+from dbsige.core.views import rep_physical_progress
+
+urlpatterns = (
+    url(r'^$', home),
+    url('', rep_physical_progress),
+    url(r'^admin/', admin.site.urls)
+)
